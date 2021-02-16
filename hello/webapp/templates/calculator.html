@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <p>First number:
+            <input type="number" name="first_num" >
+        </p>
+        <p>Second number: <input type="number" name="second_num" >
+        </p>
+
+        <p><input name="operation" type="radio" value="+" checked> add </p>
+        <p><input name="operation" type="radio" value="-"> subtract</p>
+        <p><input name="operation" type="radio" value="*" > multiply </p>
+        <p><input name="operation" type="radio" value="/"> divide</p>
+
+        <p><input type="submit" value="calculate"></p>
+    </form>
+    <h4>{{ result }}</h4>
+
+</body>
+</html>
